@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('stage1') {
+            steps {
+                echo 'copy code'
+git branch: 'main',url: 'https://github.com/devclass1/sample2.git'
+            }
+        }
+
+stage('stage2') {
+            steps {
+                sh '''
+echo 'copy code to app directory'
+rm /var/www/html/index.html
+cp /var/lib/jenkins/workspace/pipeline1/index.html /var/www/html/
+'''
+            }
+        }
+    }
+}
+
