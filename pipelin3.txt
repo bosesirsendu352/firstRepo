@@ -14,7 +14,7 @@ stage('stage2') {
                 sh '''
 echo 'copy code to app directory'
 rm /var/www/html/index.html
-cp /var/lib/jenkins/workspace/pipelin3/index.html /var/www/html/
+cp /var/lib/jenkins/workspace/pipeline3/index.html /var/www/html/
 '''
             }
         }
