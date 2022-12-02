@@ -5,7 +5,7 @@ pipeline {
         stage('stage1') {
             steps {
                 echo 'copy code'
-git branch: 'main',url: 'https://github.com/devclass1/sample2.git'
+git branch: 'main',url: 'https://github.com/bosesirsendu352/firstRepo.git'
             }
         }
 
@@ -14,7 +14,7 @@ stage('stage2') {
                 sh '''
 echo 'copy code to app directory'
 rm /var/www/html/index.html
-cp /var/lib/jenkins/workspace/pipeline1/index.html /var/www/html/
+cp /var/lib/jenkins/workspace/pipelin3/index.html /var/www/html/
 '''
             }
         }
